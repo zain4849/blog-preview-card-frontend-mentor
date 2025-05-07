@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@500;800&display=swap");
+
+:root {
+  /* Colors */
+  --clr-primary: hsl(47, 88%, 63%);
+  --clr-gray-950: hsl(0, 0%, 7%);
+  --clr-gray-500: hsl(0, 0%, 42%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  /* Typography */
+  --ff-primary: "Figtree", sans-serif;
+
+  /* Font weights */
+  --fw-medium: 500;
+  --fw-extra-bold: 800;
+
+  /* Font sizes */
+  --fs-300: 0.875rem; /* 14px */
+  --fs-400: 1rem; /* 16px */
+  --fs-500: 1.5rem; /* 24px */
+
+  /* Line heights */
+  --lh-normal: 150%;
+
+  /* Spacing */
+  --space-50: 0.25rem; /* 4px */
+  --space-100: 0.5rem; /* 8px */
+  --space-150: 0.75rem; /* 12px */
+  --space-300: 1.5rem; /* 24px */
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: var(--lh-normal);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-primary);
+  font-family: var(--ff-primary);
+  line-height: var(--lh-normal);
+  font-weight: var(--fw-medium);
+}
+
+/* Utility classes */
+.text-1 {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-extra-bold);
+}
+
+.text-2 {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-medium);
+}
+
+.text-3 {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-medium);
+}
+
+.text-3-bold {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-extra-bold);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--clr-white);
+  width: 384px;
+  padding: var(--space-300);
+  border-radius: 20px;
+  box-shadow: 10px 10px;
+  transition: box-shadow 0.2s, width 0.2s; /* Changed to width transition */
+}
+
+.card:hover {
+  box-shadow: none;
+  width: 400px; /* Increased width on hover */
+}
+
+img {
+  border-radius: 10px;
+}
+
+.card__tag {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-extra-bold);
+  padding: 4px 12px;
+  background-color: var(--clr-primary);
+  align-self: flex-start;
+  border-radius: 4px;
+}
+
+.card__time {
+  font-size: var(--fs-300);
+}
+
+.card__title {
+  font-size: var(--fs-500);
+  font-weight: var(--fw-extra-bold);
+  cursor: pointer;
+}
+
+.card__title:hover{
+    color: var(--clr-primary);
+}
+
+.card__description {
+  color: var(--clr-gray-500);
+}
+
+.card__tag,
+.card__time,
+.card__title,
+.card__description {
+  margin-top: var(--space-150);
+}
+
+.card__author {
+  margin-top: var(--space-300);
+  display: flex;
+  align-items: center;
+  gap: var(--space-150);
+}
+
+.card__author-image {
+  width: 32px;
+}
+
+.card__author-name {
+    font-size: var(--fs-300);
+}
+
+
+/* @media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  } */
